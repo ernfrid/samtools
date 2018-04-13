@@ -508,7 +508,7 @@ int main_samview(int argc, char *argv[])
                             }
                         }
                         if (result < -1) {
-                            fprintf(stderr, "[main_samview] retrieval of region %d failed due to truncated file or corrupt BAM index file\n", iter->curr_tid);
+                            fprintf(stderr, "[main_samview] retrieval of region %s %d %d failed due to truncated file or corrupt BAM index file\n", header->target_name[iter->curr_tid], iter->curr_beg, iter->curr_end);
                             ret = 1;
                         }
 
